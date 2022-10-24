@@ -1,3 +1,9 @@
+>## This project is just react refresher to the nextjs course from maximilian schwarzmueller
+
+#### Want to see the demo of the project ? visit this page for the demo
+
+[NextJs Refresher course](https://nextjs-refresher.vercel.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

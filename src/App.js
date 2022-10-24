@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { AllMeetUps } from './pages/AllMeetUps';
+
+import { Route, Switch } from 'react-router-dom';
+import { Favorite } from './pages/Favorite';
+import { NewMeetUps } from './pages/NewMeetUps';
+import { Error404 } from './pages/Error404';
+import Layout from './components/layouts/Layout';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Layout>
+            <Switch>
+                <Route path="/" exact>
+                    <AllMeetUps/>
+                </Route>
+                <Route path="/new-meetup">
+                    <NewMeetUps/>
+                </Route>
+                <Route path="/favorites">
+                    <Favorite/>
+                </Route>
+                <Route>
+                    <Error404 />
+                </Route>
+            </Switch>
+
+        </Layout>
+
+    );
 }
 
 export default App;
